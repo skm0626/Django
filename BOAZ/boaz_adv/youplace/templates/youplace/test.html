@@ -5,13 +5,18 @@
 	<title>Kakao 지도 시작하기</title>
 </head>
 <body>
-	<div id="map" style="width:500px;height:400px;"></div>
+	<div id="map" style="width:1000px;height:800px;"></div>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=491e7915be4bc0fead9fb5ed896a0929"></script>
 	<script>
 		var container = document.getElementById('map');
 		var options = {
-			center: new kakao.maps.LatLng(33.450701, 126.570667),
-			level: 3
+			//center: new kakao.maps.LatLng(33.438107106660055, 126.52283120392389), //제주시 중부
+			//center: new kakao.maps.LatLng(33.38527638949422, 126.30386105785516), //제주시 서부
+			center: new kakao.maps.LatLng(33.499398992181554, 126.77526522253555), //제주시 북부
+			//center: new kakao.maps.LatLng(33.26796257891194, 126.30386105910041), //서귀포시 서부
+			//center: new kakao.maps.LatLng(33.29168120922014, 126.49809703677447), //서귀포시 중부
+			//center: new kakao.maps.LatLng(33.36826656497475, 126.76871794959403), //서귀포시 븍부
+			level: 8
 		};
 
 		var map = new kakao.maps.Map(container, options);
