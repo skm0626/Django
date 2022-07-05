@@ -11,3 +11,8 @@ python manage.py startapp youplace
 
 HOW TO RUN:
 py manage.py runserver
+
+## OIDC
+* 가상환경 이름 : oidc
+* project name : tutorial
+* app name : community
