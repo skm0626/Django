@@ -16,3 +16,6 @@ py manage.py runserver
 * 가상환경 이름 : oidc
 * project name : tutorial
 * app name : community
+
+* 가상환경 이름 : extractlocation
+* project name : oidckm
