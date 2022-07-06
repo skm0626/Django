@@ -23,3 +23,4 @@ https://www.inflearn.com/course/django-%EC%B4%88%EB%B3%B4-%EA%B0%80%EC%9D%B4%EB%
 * 가상환경 이름 : oidckm1
 * project name : extractlocation
 * app name : cocokm
+superuser : kyungmin / email:skm0626@naver.com / 비밀번호:rudalsdl!!99
