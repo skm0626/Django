@@ -21,4 +21,6 @@ from cocokm.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('checkinfo/', checkinfo, name='checkinfo'),
+    path('insert', insert, name='insert'),
+    path('list', list, name='list'), 
 ]
