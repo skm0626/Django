@@ -13,9 +13,9 @@ class locationInfo(models.Model):
     publishTime = models.CharField(max_length=50)
     category = models.CharField(max_length=50)
     place_url = models.CharField(max_length=50)
-    address_6 = models.CharField(max_length=50)
+    # address_6 = models.CharField(max_length=50)
     viewCount = models.IntegerField()
-    likeCount = models.IntegerField()
+    # likeCount = models.IntegerField()
     x = models.DecimalField(max_digits = 24, decimal_places = 18)
     y = models.DecimalField(max_digits = 24, decimal_places = 18)
 
