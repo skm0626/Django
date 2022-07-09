@@ -428,7 +428,7 @@ def data_processing_(data):
     # 중복 제거!!!
     x = list({i['place_name'][0]:i for i in real}.values())
     print("최종 데이터!!!!!")
-    print(x)
+    print(type(x))
 
 dataset = collect_data('제주 Vlog','viewCount')
 records = data_processing_(dataset)

@@ -429,6 +429,7 @@ def data_processing_(data):
     x = list({i['place_name'][0]:i for i in real}.values())
     print("최종 데이터!!!!!")
     print(x)
+    return x
 
 # dataset = collect_data('제주 Vlog','viewCount')
 # records = data_processing_(dataset)
