@@ -27,8 +27,8 @@ def insert(request):
         #irum = request.POST.get("name")
         irum = request.POST["name"]
         dataset = collect_data(irum,'viewCount')
-        records = data_processing_(dataset)
-        print(type(records))
+        records = data_processing_(irum,dataset)
+        # print(records)
         for i in range(len(records)):
             form = Form(records[i])
             print(form)

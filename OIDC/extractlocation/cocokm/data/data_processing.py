@@ -7,8 +7,9 @@ import pandas as pd
 from pytube import YouTube
 from difflib import SequenceMatcher
 
-def data_processing_(data):
+def data_processing_(q,data):
 
+    place = q
     video_id = []
     title = []
     description = []
@@ -120,7 +121,8 @@ def data_processing_(data):
             # print(new_info_list2[i][j][0], new_info_list2[i][j][1][k]['place_name'],similar(new_info_list2[i][j][0], new_info_list2[i][j][1][k]['place_name']))
             if similar(new_info_list2[i][j][0], new_info_list2[i][j][1][k]['place_name'])>0.45:
             #if (new_info_list2[i][j][0] == new_info_list2[i][j][1][k]['place_name']):
-              jeju_json.append(new_info_list2[i][j][1][k]) #jeju_json = 제대로된 장소 정보들이 담긴 리스트
+                 if (place in new_info_list2[i][j][1][k]['road_address_name']):
+                     jeju_json.append(new_info_list2[i][j][1][k]) #jeju_json = 제대로된 장소 정보들이 담긴 리스트
               #print(info[i][1][j])
         jeju_info.append([new_info_list2[i][j][0], jeju_json]) #jeju_info = [장소이름, [장소검색결과 리스트]]
       real_jeju_info.append(jeju_info)
@@ -301,7 +303,8 @@ def data_processing_(data):
             # print(new_info_list2_des[i][j][0], new_info_list2_des[i][j][1][k]['place_name'],similar(new_info_list2_des[i][j][0], new_info_list2_des[i][j][1][k]['place_name']))
             if similar(new_info_list2_des[i][j][0], new_info_list2_des[i][j][1][k]['place_name'])>0.45:
             #if (new_info_list2[i][j][0] == new_info_list2[i][j][1][k]['place_name']):
-              jeju_json_des.append(new_info_list2_des[i][j][1][k]) #jeju_json = 제대로된 장소 정보들이 담긴 리스트
+                 if (place in new_info_list2_des[i][j][1][k]['road_address_name']):
+                     jeju_json_des.append(new_info_list2_des[i][j][1][k]) #jeju_json = 제대로된 장소 정보들이 담긴 리스트
               #print(info[i][1][j])
         jeju_info_des.append([new_info_list2_des[i][j][0], jeju_json_des]) #jeju_info = [장소이름, [장소검색결과 리스트]]
       real_jeju_info_des.append(jeju_info_des)
@@ -429,7 +432,8 @@ def data_processing_(data):
     # 중복 제거!!!
     x = list({i['place_name'][0]:i for i in real}.values())
     print("최종 데이터!!!!!")
-    print(x)
+    # print(x)
+    print(place)
     return x
 
 # dataset = collect_data('제주 Vlog','viewCount')
