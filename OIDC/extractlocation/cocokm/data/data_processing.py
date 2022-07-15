@@ -158,6 +158,7 @@ def data_processing_(data):
         #여행, 음식점, (문화,예술), (가정,생활=소품샵)
         if ((total_place_list[i][j][1]['category_name'].split())[0] == '여행') or ((total_place_list[i][j][1]['category_name'].split())[0] == '음식점') or ((total_place_list[i][j][1]['category_name'].split())[0] == '문화,예술') or ((total_place_list[i][j][1]['category_name'].split())[0] == '가정,생활') or ((total_place_list[i][j][1]['category_name'].split())[0] == '스포츠,레저') :
           catergorize_list.append(total_place_list[i][j])
+         # 검색어가 주소에 포함되는지도 전처리하기! (예를 들어 '성수'로 검색 시 주소에 '성수'가 있어야함)
       total_catergorize_list.append(catergorize_list)
     # len(total_catergorize_list)
     # print(total_catergorize_list)
